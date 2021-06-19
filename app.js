@@ -22,6 +22,9 @@ father.addEventListener("click", (e) => {
 		let selectedItems = {img, title, price: parseInt(price)};
 		console.log(selectedItems);
 
+		const firstArray = Object.keys(selectedItems);
+		console.log(firstArray);
+
 		// ADDITION OF ALL PRICE TAGS //
 
 		items = [...items, selectedItems];
@@ -34,11 +37,11 @@ father.addEventListener("click", (e) => {
 		const messageItems = document.getElementById("messageItems");
 
 		let newMessageItems = document.createElement("li");
-		newMessageItems.textContent = {selectedItems};
+		newMessageItems.textContent = firstArray;
 
 		messageItems.appendChild(newMessageItems);
 
-		///
+		//
 
 		let totalItems = document.getElementById("totalItems");
 
